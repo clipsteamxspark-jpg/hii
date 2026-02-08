@@ -1,0 +1,88 @@
+<div class="slide">
+  <h1>Hey Shreya 💌</h1>
+  <p>
+    mumma, agar chocolates feelings hoti na,  
+    toh **aap har type ki chocolate ka perfect mix ho** 😌🍫  
+    ekdum special… jaise mairi mumma.
+  </p>
+  <button onclick="nextSlide()">aur bhi ❤️</button>
+</div>
+
+<div class="slide">
+  <h1>My Pookie Mumma 🧸</h1>
+  <p>
+    Aap sirf meri favourite nahi ho,  
+    **aap meri smile, meri peace aur meri har choti khushi ho** 💕  
+    aapke bina sab kuch thoda adhoora lagta hai.
+  </p>
+  <button onclick="nextSlide()">Sun raha hoon 🥺</button>
+</div>
+
+<div class="slide">
+  <h1>Chocolate Truth 🍫</h1>
+  <p>
+    Log kehte hain chocolate stress kam karti hai,  
+    par sach ye hai ki **janna aap meri har tension ka solution ho** 💗  
+    aap ho toh sab accha lagta hai, mumma.
+  </p>
+  <button onclick="nextSlide()">Cute hai 🫶</button>
+</div>
+
+<div class="slide">
+  <h1>Promise 🤞</h1>
+  <p>
+    Chocolate Day ho ya koi normal sa din,  
+    main hamesha **aapke saath rahunga, Shreya**.  
+    Low mood ho, overthinking ho,  
+    ya bas bina reason baat karni ho… main hoon mumma ❤️
+  </p>
+  <button onclick="nextSlide()">Aur ek 💞</button>
+</div>
+
+<div class="slide">
+  <h1>Sirf Aap ❤️</h1>
+  <p>
+    Shreya, aap meri duniya ho.  
+    Meri sabse pyaari aadat,  
+    meri comfort place,  
+    aur meri **forever wali feeling** ho aap, mumma 💖🍫
+  </p>
+  <button onclick="nextSlide()">Last 💝</button>
+</div>
+
+<div class="slide">
+  <h1>🍫 Happy Chocolate Day Mumma 🍫</h1>
+  <p>
+    Ek chocolate meri taraf se,  
+    aur **poora dil aapke liye, Shreya** 💘  
+    Aap ho toh sab kuch perfect lagta hai.  
+    My pookie mumma 😌❤️
+  </p>
+  <footer>Made with ❤️ only for Shreya</footer>
+</div>
+
+<script>
+let index = 0;
+const slides = document.querySelectorAll('.slide');
+
+function nextSlide(){
+  slides[index].classList.remove('active');
+  index++;
+  if(index >= slides.length) index = slides.length - 1;
+  slides[index].classList.add('active');
+}
+
+function createHeart(){
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.innerHTML = '❤️';
+  heart.style.left = Math.random()*100 + 'vw';
+  heart.style.animationDuration = (4 + Math.random()*3) + 's';
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),6000);
+}
+setInterval(createHeart,500);
+</script>
+
+</body>
+</html>
